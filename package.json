@@ -1,5 +1,5 @@
 {
-  "name": "SAP-CP-CF-HelloWorld",
+  "name": "sap-cp-cf-helloworld",
   "description": "Sample SAP-CP-CF Hello World Restful Service",
   "version": "0.0.1",
   "private": true,
@@ -9,8 +9,19 @@
   },
   "engines": {
     "node": "6.x.x"
-  },  
+  },
   "scripts": {
     "start": "node server.js"
-  }
+  },
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SAP-samples/cloud-cf-helloworld-nodejs.git"
+  },
+  "author": "Ernesto_SAP",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SAP-samples/cloud-cf-helloworld-nodejs/issues"
+  },
+  "homepage": "https://github.com/SAP-samples/cloud-cf-helloworld-nodejs#readme"
 }
