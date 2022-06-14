@@ -2,7 +2,7 @@
 node {
         stage('Preparation') {
            //Preparations and checkout the code 
-            "C:\\ToscaCI\ToscaCIRemoteExecutionService.exe"
+            "C:\\ToscaCI\\ToscaCIRemoteExecutionService.exe"
         }
         stage('Build') {
             "C:\\ToscaCI\\Client\\ToscaCIClient.exe" -m local -r C:\\Temp\\ToscaCI.xml
