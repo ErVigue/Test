@@ -1,7 +1,7 @@
 agent {
   docker {
     image "ppiper/jenkins-master"
-    args "-u root"      # <=-----------
+    args "-u root"
     alwaysPull false
     reuseNode true
   }
