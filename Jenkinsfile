@@ -1,11 +1,4 @@
-agent {
-  docker {
-    image "ppiper/jenkins-master"
-    args "-u root"
-    alwaysPull false
-    reuseNode true
-  }
-}
+
 node {
         stage('Preparation') {
            //Preparations and checkout the code 
