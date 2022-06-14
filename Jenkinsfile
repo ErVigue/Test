@@ -3,7 +3,7 @@ node {
            //Preparations and checkout the code 
         }
         stage('Build') {
-            bat "C:\ToscaCI\Client\ToscaCIClient.exe"
+            bat "c://ToscaCI/Client/ToscaCIClient.exe"
         }  
         stage('Post build action'){
      
