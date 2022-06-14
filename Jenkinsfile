@@ -5,7 +5,7 @@ node {
             echo "Hello World"
         }
         stage('Build') {
-            sh "c:\\ToscaCI\\Client\\ToscaCIClient.exe"
+            "C:\\ToscaCI\\Client\\ToscaCIClient.exe"
         }  
         stage('Post build action'){
      
