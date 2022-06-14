@@ -3,7 +3,7 @@ node {
            //Preparations and checkout the code 
         }
         stage('Build') {
-            sh "c://ToscaCI/Client/example.sh"
+            sh "C:\ToscaCI\example.sh"
         }  
         stage('Post build action'){
      
