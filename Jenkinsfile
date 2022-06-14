@@ -2,8 +2,13 @@
 node {
         stage('Preparation') {
            //Preparations and checkout the code 
-            bat "C:\ToscaCI\ToscaCIRemoteExecutionService.exe"
+            echo "preparing"
         }
+        stage('build') {
+            steps {
+                script {
+                  "C:\ToscaCI\Client\ToscaCIClient.exe" -m local -r C:\Temp\ToscaCI.xml             
+                }
         stage('Build') {
             bat "C:\ToscaCI\Client\ToscaCIClient.exe" -m local -r C:\Temp\ToscaCI.xml
         }  
