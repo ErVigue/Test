@@ -14,8 +14,5 @@ steps:
   displayName: 'version'
 
 - script: |
-    curl --url https://mo-cd1351cf9.coe-alm.c.eu-de-1.cloud.sap:50001/sap/opu/odata/SALM/EXT_DEVOPS_INTEG_SRV/WorkItemSet(guid=guid'%{WID}')
-     -H "Authorization: Basic STg0MTM5ODpvdHNlbnJlMjI="
-     -H "Accept: application/json"
-     -H "DataServiceVersion: 2.0"
+    curl --url https://mo-cd1351cf9.coe-alm.c.eu-de-1.cloud.sap:50001/sap/opu/odata/SALM/EXT_DEVOPS_INTEG_SRV/WorkItemSet(guid=guid'%{WID}') -H "Authorization: Basic STg0MTM5ODpvdHNlbnJlMjI=" -H "Accept: application/json" -H "DataServiceVersion: 2.0"
   displayName: 'Reading my WI'
