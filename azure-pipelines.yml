@@ -35,19 +35,11 @@ stages:
           - script: curl -v --request POST --url https://mo-cd1351cf9.coe-alm.c.eu-de-1.cloud.sap:50001/sap/opu/odata/SALM/EXT_DEVOPS_INTEG_SRV/WorkItemSet(guid=guid'FA163E5E-4B54-1EDC-BBB0-8DFCC4252095')/toWIText -H "Authorization:Basic STg0MTM5ODpvdHNlbnJlMjI=" -H "Accept:application/json" -H "x-csrf-token:GUuWZCOwyRRBfmyIHjXAIg=="
             displayName: 'Posting Text'
 
-
-          - task: InvokeRESTAPI@1
-            inputs:
-              connectionType: 'connectedServiceNameARM'
-              method: 'GET'
-              headers: |
-                {
-                  "Content-Type":"application/json"
-                }
-              body: |
-                {
-                  "textType": "S105",
-                  "textContent": "New Comment Text"
-                }
-              urlSuffix: https://mo-cd1351cf9.coe-alm.c.eu-de-1.cloud.sap:50001/sap/opu/odata/SALM/EXT_DEVOPS_INTEG_SRV/WorkItemSet(guid=guid'FA163E5E-4B54-1EDC-BBB0-8DFCC4252095')
-              waitForCompletion: 'false'
+          - script: |
+              curl --request POST -v --url https://mo-cd1351cf9.coe-alm.c.eu-de-1.cloud.sap:50001/sap/opu/odata/SALM/EXT_DEVOPS_INTEG_SRV/WorkItemSet(guid=guid'FA163E5E-4B54-1EDC-BBB0-8DFCC4252095')/toWIText
+                --header 'x-csrf-token:gT9Rlwh_TvasCrgFhwFTEQ=='
+                --header 'Authorization:Basic aTg0MTM5ODpvdHNlbnJlMjI='
+                --header 'Content-Type:application/json'
+                --header 'Cookie:SAP_SESSIONID_S2A_001=5FvgX71CE7y3c_uwxbREH9nBsqstHRHtlO36Fj5eS1Q%3d; sap-usercontext=sap-client=001'
+                --data-raw {\"textType\":\"S105\", \"textContent\":\"Secon Try\"}
+            displayName: 'Posting a text'
