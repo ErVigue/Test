@@ -6,6 +6,10 @@
 trigger:
 - main
 
+variables:
+  - name: csrf
+    value: initialValue
+  
 stages:
   - stage: Read_WI
     jobs:
